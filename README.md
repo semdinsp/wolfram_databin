@@ -16,4 +16,5 @@ It is a bit slow so perhaps only call it upon startup
 Usage
 =======
 
-    @hwid.systemid
+    Hwid.systemid
+    
