@@ -24,16 +24,25 @@ module Hwid
       return get_mac_id if mac
       return get_linux_id if linux
     end
+    def run_cmd(cmd)
+      res=""
+      begin
+        res=`#{cmd}`
+      rescue Exception => e
+        res="Serial: unknown"
+      end
+      res
+    end
     def get_rasp_id
-      res=`grep Serial  /proc/cpuinfo` 
+      res=run_cmd('grep Serial  /proc/cpuinfo')
       self.parse(res)
     end
     def get_mac_id
-      res=`system_profiler SPHardwareDataType -timeout 0 | grep Serial` 
+      res=run_cmd('/usr/sbin/system_profiler SPHardwareDataType -timeout 0 | grep Serial')
       self.parse(res)
     end
     def get_linux_id
-      res=`ifconfig |grep HWaddr`.split.last
+      res=run_cmd('ifconfig | grep HWaddr').split.last
     end
 
    end    # Class

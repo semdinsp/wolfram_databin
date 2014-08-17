@@ -23,7 +23,14 @@ class HwidTest <  Minitest::Test
     assert @f.systemid!='unknown', "return id"
   end
   def test_class
-     assert Hwid.systemid!='unknown', "return id"
+     assert Hwid.systemid!='unknown', "return id is #{Hwid.systemid}"
+    
+  end
+  def test_run_cmd
+     d =@f.run_cmd('date')
+     t=Time.now.day
+     puts d
+     assert d.include?(t.to_s), "date is #{d} day is #{t}"
     
   end
     
