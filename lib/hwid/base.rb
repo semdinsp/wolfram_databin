@@ -43,7 +43,7 @@ module Hwid
     end
     def get_linux_id
       res="Serial: unknown"
-      ifconfig_avail = !(ifconfig_path = `which ifconfig`.strip).empty? && File.executable(ifconfig_path)
+      ifconfig_avail = !(ifconfig_path = `which ifconfig`.strip).empty? && File.executable?(ifconfig_path)
       res=run_cmd('ifconfig | grep HWaddr').split.last if ifconfig_avail
       res
     end
