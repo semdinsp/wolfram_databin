@@ -11,7 +11,6 @@ Simple hwid id
 THis is not secure but gives  a simple way to identify the hardware from a particular client application.
 
 It is a bit slow so perhaps only call it upon startup
- 
 
 Usage
 =======
