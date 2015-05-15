@@ -2,13 +2,13 @@ language: ruby
 before_install:
   - travis_retry gem install bundler
 rvm:
-  - "2.0.0"
+  - "2.1.5"
 gemfile: Gemfile
 script: 
   - bundle
   - bundle install
   - cd test; 
-  - ruby test_hwid.rb
+  - ruby test_wolfram.rb
 notifications:
   recipients:
     - scott.sproule@estormtech.com
