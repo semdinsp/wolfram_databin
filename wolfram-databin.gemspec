@@ -1,12 +1,12 @@
 Gem::Specification.new do |s|
-  s.name        = "hwid"
-  s.version     = "0.1.5"
+  s.name        = "wolfram_databin"
+  s.version     = "0.0.5"
   s.author      = "Scott Sproule"
   s.email       = "scott.sproule@ficonab.com"
-  s.homepage    = "http://github.com/semdinsp/hwid"
-  s.summary     = "Hardware id for mac and rasp pi (not secure)"
-  s.description = "Get a rough hardware id of the system that the gem is running on" 
-  s.executables = ['hwid.rb']    #should be "name.rb"
+  s.homepage    = "http://github.com/semdinsp/wolfram_databin"
+  s.summary     = "Wolfram databin access"
+  s.description = "UPload data to wolfram databin  mathematica via ruby"
+  s.executables = ['wolfram.rb']    #should be "name.rb"
   s.files        = Dir["{lib,test}/**/*"] +Dir["bin/*.rb"] + Dir["[A-Z]*"] # + ["init.rb"]
   s.require_path = "lib"
   s.license = 'MIT'

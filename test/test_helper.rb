@@ -12,6 +12,6 @@ SimpleCov.command_name 'test'
 #end
 SimpleCov.start 
 
-require File.dirname(__FILE__) + '/../lib/hwid'
+require File.dirname(__FILE__) + '/../lib/wolfram_databin'
 
 
