@@ -4,7 +4,7 @@
 Wolfram Databin
 ============
 
-post data to  a wolfram databin
+Post data to  a wolfram databin.  You can post just about any kind of string data to the databin.  Just add more stuff to the query hash and send it.  The bin id is merged with the query hash so no need  to add the bin id to the query.
 
 Test URL
 =======
@@ -15,6 +15,9 @@ Usage
 
     @dbin=WolframDatabin::Base.new
     @dbin.set_shortid("4PZWVcDT")
-    query= {time: time }
+    query= {time: Time.now}
     res=@dbin.post_data(query)
     
+One shot usage
+==============
+    WolframDatbin::Base.submit_data("4PZWVcDT",{time: Time.now})

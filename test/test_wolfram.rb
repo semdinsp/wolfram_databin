@@ -19,6 +19,9 @@ class WolframDatabinTest <  Minitest::Test
   def test_creation
      assert @dbin!=nil, "should be created"
   end
+  def test_datadrop_url
+     assert @dbin.datadrop_url=="http://wolfr.am/4PZWVcDT", "should have short id #{@dbin.datadrop_url}"
+  end
   
   def test_postdatabin
     time=Time.now
@@ -26,6 +29,16 @@ class WolframDatabinTest <  Minitest::Test
     res=@dbin.post_data(query)
     puts  "result is #{res}"
     assert res[:success], "response should be success #{res}"
+  end
+  def test_submit
+    res=@dbin.submit_data("4PZWVcDT",{submit_time: Time.now})
+    assert res[:success], "response should be success #{res}  #{@dbin.datadrop_url}"
+    
+  end
+  def test_submit_class
+    res = WolframDatabin::Base.submit_data("4PZWVcDT",{clas_submit_time: Time.now})
+    assert res[:success], "response should be success #{res} "
+    
   end
  
     

@@ -13,10 +13,21 @@ module WolframDatabin
   def debug
     self.debug_flag=true
   end
-  
+  def datadrop_url
+    "http://wolfr.am/#{self.shortid}"
+  end
   def get_url
     url="https://datadrop.wolframcloud.com/api/v1.0/Add?"
     url
+  end
+  def self.submit_data(tshortid,aquery)
+    dbin=WolframDatabin::Base.new
+    dbin.submit_data(tshortid,aquery)
+  end
+  def submit_data(tshortid,aquery)
+    self.set_shortid(tshortid)
+    res=self.post_data(aquery)
+    res
   end
   def post_data(query)
     raise "short id not set" if self.shortid==nil
