@@ -17,4 +17,4 @@ notifications:
     on_failure: always
 addons:
   code_climate:
-    repo_token: 885a28736bc9e348e718cf4fbfdea1ec098fea3c54a9f027d5e1e7aa666c0c4b 
+    repo_token: f9212aa110aed0c19d87a254935e6d5f6d91aa5c844197dd5608c7696c778211

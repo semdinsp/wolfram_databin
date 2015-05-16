@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/semdinsp/wolfram_databin.svg?branch=master)](https://travis-ci.org/semdinsp/wolfram_databin)[![Code Climate](https://codeclimate.com/github/semdinsp/wolfram_databin/badges/gpa.svg)](https://codeclimate.com/github/semdinsp/wolfram_databin)
+[![Build Status](https://travis-ci.org/semdinsp/wolfram_databin.svg)](https://travis-ci.org/semdinsp/wolfram_databin)[![Code Climate](https://codeclimate.com/github/semdinsp/wolfram_databin/badges/gpa.svg)](https://codeclimate.com/github/semdinsp/wolfram_databin)
 [![Gem Version](https://badge.fury.io/rb/wolfram_databin.png)](http://badge.fury.io/rb/wolfram_databin)
 
 Wolfram Databin
