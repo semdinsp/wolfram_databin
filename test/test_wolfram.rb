@@ -22,6 +22,15 @@ class WolframDatabinTest <  Minitest::Test
   def test_datadrop_url
      assert @dbin.datadrop_url=="http://wolfr.am/4PZWVcDT", "should have short id #{@dbin.datadrop_url}"
   end
+  def test_query_fixer
+    time=Time.now
+    query= {time: time, new_time: time }
+    res=@dbin.fix_query(query)
+    assert res[:time]==nil, "symbol to string unchanged"
+    assert res['time']==time, "time unchanged"
+    assert res[:new_time]==nil, "new time nil"
+    assert res['newUtime']==time, "new time has U rather than underscore"
+  end
   
   def test_postdatabin
     time=Time.now

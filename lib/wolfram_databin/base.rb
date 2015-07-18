@@ -47,8 +47,7 @@ module WolframDatabin
         Timeout::timeout(40) do    
          # @uri=URI.parse(self.get_url)
           q=self.get_url + Hurley::Query::Flat.new(qdata).to_s
-          puts "url is #{q}"
-          puts "uri #{@uri} query #{qdata}" if self.debug_flag
+          puts "url #{q} query #{qdata}" if self.debug_flag
           res=Hurley.get(q)
         end
        rescue  Exception => e
