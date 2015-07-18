@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "wolfram_databin"
-  s.version     = "0.1.2"
+  s.version     = "0.1.3"
   s.author      = "Scott Sproule"
   s.email       = "scott.sproule@ficonab.com"
   s.homepage    = "http://github.com/semdinsp/wolfram_databin"
