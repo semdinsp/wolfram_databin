@@ -44,6 +44,11 @@ class WolframDatabinTest <  Minitest::Test
     assert res[:success], "response should be success #{res}  #{@dbin.datadrop_url}"
     
   end
+  def test_toplevel_submit_classs
+    res = WolframDatabin.submit_data("4PZWVcDT",{submit_class: Time.now})
+    assert res[:success], "response should be success #{res} "
+    
+  end
   def test_submit_class
     res = WolframDatabin::Base.submit_data("4PZWVcDT",{classubmittime: Time.now})
     assert res[:success], "response should be success #{res} "
