@@ -1,22 +1,22 @@
 PATH
   remote: .
   specs:
-    wolfram_databin (0.1.6)
+    wolfram_databin (0.1.8)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    codeclimate-test-reporter (0.4.7)
-      simplecov (>= 0.7.1, < 1.0.0)
+    codeclimate-test-reporter (1.0.9)
+      simplecov (<= 0.13)
     docile (1.1.5)
-    hurley (0.1)
-    json (1.8.3)
-    minitest (5.7.0)
-    simplecov (0.10.0)
+    hurley (0.2)
+    json (2.3.1)
+    minitest (5.14.1)
+    simplecov (0.13.0)
       docile (~> 1.1.0)
-      json (~> 1.8)
+      json (>= 1.8, < 3)
       simplecov-html (~> 0.10.0)
-    simplecov-html (0.10.0)
+    simplecov-html (0.10.2)
 
 PLATFORMS
   ruby
@@ -26,3 +26,9 @@ DEPENDENCIES
   hurley
   minitest
   wolfram_databin!
+
+RUBY VERSION
+   ruby 2.6.6p146
+
+BUNDLED WITH
+   1.17.3

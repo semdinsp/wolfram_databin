@@ -25,6 +25,8 @@ module WolframDatabin
   end
   def self.submit_data(tshortid,aquery)
     dbin=WolframDatabin::Base.new
+    dbin.set_shortid(tshortid)
+    puts "WolframDatabin Gem: posting #{dbin.datadrop_url} with #{aquery.inspect}  at #{Time.now}"
     dbin.submit_data(tshortid,aquery)
   end
   def fix_query(query)
